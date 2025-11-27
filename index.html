@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hitanshu Upadhyay - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #eef2f3;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #4CAF50, #2e7d32);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+        header p {
+            font-size: 20px;
+        }
+        nav {
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            border: 5px solid #4CAF50;
+        }
+        h2 {
+            text-align: center;
+            color: #2e7d32;
+        }
+        ul li {
+            margin: 8px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #2e7d32;
+            color: white;
+            margin-top: 40px;
+        }
+        .btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hitanshu Upadhyay</h1>
+        <p>IT Student | AI/ML Enthusiast | Researcher</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="card" id="about">
+            <img src="profile.jpg" class="profile-pic" alt="Profile Picture">
+            <h2>About Me</h2>
+            <p>
+                I am Hitanshu Upadhyay, an IT student passionate about AI/ML, research, electronics,
+                and agriculture-tech innovations. I love building meaningful projects that blend
+                technology with real-world applications.
+            </p>
+        </div>
+
+        <div class="card" id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python, C, HTML/CSS, JavaScript</li>
+                <li>AI/ML Basics & Research Work</li>
+                <li>Electronics & IoT (ESP8266, Sensors)</li>
+                <li>Problem Solving & Project Documentation</li>
+            </ul>
+        </div>
+
+        <div class="card" id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Soil Health Prediction System (ML + Sensors)</li>
+                <li>Facial Emotion Recognition (DeepFace)</li>
+                <li>Stock Price Analysis Tool</li>
+                <li>Home Automation using ESP8266</li>
+                <li>Crop Yield Analysis using Differential Calculus</li>
+            </ul>
+        </div>
+
+        <div class="card" id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: yourname@gmail.com</p>
+            <p>Instagram: @yourusername</p>
+            <a href="mailto:yourname@gmail.com" class="btn">Send Email</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Hitanshu Upadhyay | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
