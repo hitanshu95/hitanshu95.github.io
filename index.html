@@ -1,149 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hitanshu Upadhyay - Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitanshu Upadhyay • Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-            background: #eef2f3;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            color: #222;
+            line-height: 1.6;
         }
+
         header {
-            background: linear-gradient(135deg, #4CAF50, #2e7d32);
-            padding: 60px 20px;
-            text-align: center;
-            color: white;
+            width: 100%;
+            padding: 20px 0;
+            background: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
         }
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-        }
-        header p {
-            font-size: 20px;
-        }
-        nav {
-            background: #ffffff;
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-        }
+
         .container {
             width: 90%;
-            max-width: 1000px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: auto;
         }
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 25px;
         }
-        .profile-pic {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto;
-            border: 5px solid #4CAF50;
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
         }
-        h2 {
-            text-align: center;
-            color: #2e7d32;
+
+        nav a:hover {
+            color: #007bff;
         }
-        ul li {
-            margin: 8px 0;
+
+        /* Hero Section */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
         }
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #2e7d32;
-            color: white;
-            margin-top: 40px;
+
+        .hero-text {
+            flex: 1;
         }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
         .btn {
             display: inline-block;
-            background: #4CAF50;
-            color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
+            background: #007bff;
+            color: #fff;
             border-radius: 8px;
             text-decoration: none;
-            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.3s;
         }
+
         .btn:hover {
-            background: #3e8e41;
+            background: #0056c7;
+        }
+
+        .hero img {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* About Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #444;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            padding: 25px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* Contact */
+        .contact p {
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 0;
+            color: #555;
+            font-size: 15px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero img {
+                width: 260px;
+                height: 260px;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Hitanshu Upadhyay</h1>
-        <p>IT Student | AI/ML Enthusiast | Researcher</p>
-    </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
+<header>
     <div class="container">
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
 
-        <div class="card" id="about">
-            <img src="profile.jpg" class="profile-pic" alt="Profile Picture">
-            <h2>About Me</h2>
-            <p>
-                I am Hitanshu Upadhyay, an IT student passionate about AI/ML, research, electronics,
-                and agriculture-tech innovations. I love building meaningful projects that blend
-                technology with real-world applications.
-            </p>
-        </div>
-
-        <div class="card" id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Python, C, HTML/CSS, JavaScript</li>
-                <li>AI/ML Basics & Research Work</li>
-                <li>Electronics & IoT (ESP8266, Sensors)</li>
-                <li>Problem Solving & Project Documentation</li>
-            </ul>
-        </div>
-
-        <div class="card" id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Soil Health Prediction System (ML + Sensors)</li>
-                <li>Facial Emotion Recognition (DeepFace)</li>
-                <li>Stock Price Analysis Tool</li>
-                <li>Home Automation using ESP8266</li>
-                <li>Crop Yield Analysis using Differential Calculus</li>
-            </ul>
-        </div>
-
-        <div class="card" id="contact">
-            <h2>8719989879</h2>
-            <p>Email:24BET10280</p>
-            <p>Instagram: @hitanshu_upadhyay</p>
-            <a href="mailto:yourname@gmail.com" class="btn">Send Email</a>
-        </div>
-
+<!-- Hero Section -->
+<section class="hero container">
+    <div class="hero-text">
+        <h1>Hi, I'm Hitanshu</h1>
+        <p>A passionate developer learning and building clean, modern web experiences.</p>
+        <a href="#projects" class="btn">View My Work</a>
     </div>
 
-    <footer>
-        <p>© 2025 Hitanshu Upadhyay | All Rights Reserved</p>
-    </footer>
-</body>
+    <img src="https://via.placeholder.com/350" alt="Profile Image">
+</section>
 
+<!-- About -->
+<section id="about" class="section container">
+    <h2>About Me</h2>
+    <p>
+        I am a student and aspiring developer who enjoys building simple, clean, and functional websites.
+        I focus on learning new technologies, improving my skills, and working on practical projects.
+    </p>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section container">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>My Portfolio Website</h3>
+            <p>A clean and minimal website made with HTML and CSS, hosted on GitHub Pages.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Weather App</h3>
+            <p>A simple web app that shows live weather using an API.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Calculator App</h3>
+            <p>A functional calculator with a smooth UI.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section container contact">
+    <h2>8719989879</h2>
+    <p>Email: <strong>your-24BET10280@cuchd.in</strong></p>
+</section>
+
+<footer>
+    © 2025 Hitanshu • All rights reserved.
+</footer>
+
+</body>
 </html>
+
